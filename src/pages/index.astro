@@ -53,6 +53,7 @@ import About from "../components/About.astro";
   }
 </style>
 <script>
+  if(window.innerWidth < 450) return;
   function moveCursorBG(e: MouseEvent): void {
     if (window.getComputedStyle(filterBG).display === "none") {
       filterBG.style.setProperty("display", "block");
