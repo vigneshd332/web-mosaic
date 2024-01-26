@@ -10,7 +10,7 @@
       class="decor fixed h-full w-3/4 flex flex-col items-end justify-center gap-y-4"
     >
       {
-        [
+        
           [1, 2, 3, 4].map((id: number) => (
             <>
               <div
@@ -21,8 +21,7 @@
               <div class="decor-lines h-0.5 w-1 bg-[#f0f0f0cc]" />
               <div class="decor-lines h-0.5 w-1 bg-[#f0f0f0cc]" />
             </>
-          )),
-        ]
+          ))
       }
     </div>
     <div class="flex max-sm:flex-col max-lg:gap-x-10 lg:gap-x-16 mt-10">
@@ -293,7 +292,7 @@
 </style>
 
 <script>
-  if(window.innerWidth >= 450) {
+  if(window.innerWidth >= 500) {
   let activeID = 1;
   const landing = document.getElementById("home");
   const about = document.getElementById("about");
