@@ -51,6 +51,7 @@
 * {
   box-sizing: border-box;
   color: #fffffa;
+  scroll-behavior: smooth;
 }
 
 body {
