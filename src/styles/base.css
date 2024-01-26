@@ -28,6 +28,26 @@
   src: url(/fonts/CeraPro/CeraPro-Bold.woff2) format("woff2");
 }
 
+@supports (scrollbar-width: thin) {
+  body {
+    scrollbar-color: #4fa2b7 #060d27;
+    scrollbar-width: thin;
+  }
+}
+
+@supports selector(::-webkit-scrollbar) {
+  body::-webkit-scrollbar-thumb {
+    background: #4fa2b7;
+  }
+  body::-webkit-scrollbar-track-piece {
+    background: #060d27;
+  }
+  body::-webkit-scrollbar {
+    max-width: 10px;
+    max-height: 10px;
+  }
+}
+
 * {
   box-sizing: border-box;
   color: #fffffa;
@@ -38,4 +58,5 @@ body {
   font-size: 16px;
   line-height: 1.5;
   background-color: #131313;
+  overflow-x: hidden;
 }
