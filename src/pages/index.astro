@@ -48,12 +48,16 @@ import About from "../components/About.astro";
     transition: transform 0.05s ease-out;
     transform: translate(-50%, -50%);
     pointer-events: none;
-    will-change: transform;
     z-index: 100;
+  }
+  @media screen and (min-width: 450px) {
+    .landing-bg-filtered {
+      will-change: transform;
+    }
   }
 </style>
 <script>
-  if(window.innerWidth >= 500){
+  if(window.innerWidth >= 450){
   function moveCursorBG(e: MouseEvent): void {
     if (window.getComputedStyle(filterBG).display === "none") {
       filterBG.style.setProperty("display", "block");
