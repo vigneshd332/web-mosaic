@@ -53,7 +53,7 @@ import About from "../components/About.astro";
   }
 </style>
 <script>
-  if(window.innerWidth < 450) return;
+  if(window.innerWidth >= 450){ 
   function moveCursorBG(e: MouseEvent): void {
     if (window.getComputedStyle(filterBG).display === "none") {
       filterBG.style.setProperty("display", "block");
@@ -64,4 +64,5 @@ import About from "../components/About.astro";
     "landing-bg-filtered",
   )[0] as HTMLSpanElement;
   document.addEventListener("mousemove", moveCursorBG);
+}
 </script>

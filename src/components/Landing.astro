@@ -293,7 +293,7 @@
 </style>
 
 <script>
-  if(window.innerWidth < 450) return;
+  if(window.innerWidth >= 450) {
   let activeID = 1;
   const landing = document.getElementById("home");
   const about = document.getElementById("about");
@@ -316,4 +316,5 @@
   }
   window.addEventListener("scroll", updateDecors);
   updateDecors();
+  }
 </script>
