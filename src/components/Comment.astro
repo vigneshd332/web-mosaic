@@ -1,0 +1,10 @@
+---
+import api from "../utils/api";
+const { body, author_id } = Astro.props;
+const authorDetails = await api.getAuthor(author_id);
+---
+
+<div>
+  <p class="font-bold text-sm">{authorDetails.name}</p>
+  <p class="text-sm pl-2 text-zinc-400">{body}</p>
+</div>

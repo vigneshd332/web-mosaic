@@ -1,0 +1,69 @@
+---
+import "../styles/base.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Landing from "../components/Landing.astro";
+import Posts from "../components/Posts.astro";
+import About from "../components/About.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Blooog is a blog template made with Astro and TailwindCSS"
+    />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <title>Blooog | Home</title>
+  </head>
+  <body class="relative z-[-1]">
+    <span class="landing-bg-filtered absolute w-12 h-12"></span>
+    <Header />
+    <main class="flex flex-col items-center bg-[#020411]">
+      <Landing />
+      <div
+        class="relative z-20 bg-[url('/images/post-bg.svg')] bg-cover flex flex-col items-center"
+      >
+        <div
+          class="absolute bg-[url('/images/noise.webp')] content-[''] opacity-20 mix-blend-overlay pointer-events-none h-full w-full -z-10"
+        >
+        </div>
+        <About />
+        <Posts />
+        <Footer />
+      </div>
+    </main>
+  </body>
+</html>
+<style>
+  * {
+    scroll-behavior: smooth !important;
+  }
+  .landing-bg-filtered {
+    display: none;
+    top: 0;
+    left: 0;
+    background-color: #cfad1666;
+    backdrop-filter: invert(1) blur(2px);
+    clip-path: circle(40%);
+    transition: transform 0.05s ease-out;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    will-change: transform;
+    z-index: 100;
+  }
+</style>
+<script>
+  function moveCursorBG(e: MouseEvent): void {
+    if (window.getComputedStyle(filterBG).display === "none") {
+      filterBG.style.setProperty("display", "block");
+    }
+    filterBG.style.transform = `translate(${e.pageX - filterBG.offsetWidth / 2}px, ${e.pageY - filterBG.offsetHeight / 2}px)`;
+  }
+  const filterBG = document.getElementsByClassName(
+    "landing-bg-filtered",
+  )[0] as HTMLSpanElement;
+  document.addEventListener("mousemove", moveCursorBG);
+</script>

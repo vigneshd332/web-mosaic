@@ -1,0 +1,91 @@
+---
+import api from "../utils/api";
+const { about } = await api.getAbout();
+
+const cardData: TAboutCardData[] = [
+  {
+    id: 1,
+    name: "Write your thoughts",
+    image: "/images/about-1.svg",
+    description:
+      "Write the experiences that win hearts and minds. Write the experiences that win hearts and minds.",
+  },
+  {
+    id: 2,
+    name: "Showcase your talent",
+    image: "/images/about-2.svg",
+    description:
+      "Write the experiences that win hearts and minds. Write the experiences that win hearts and minds.",
+  },
+  {
+    id: 3,
+    name: "Inspire other people",
+    image: "/images/about-3.svg",
+    description:
+      "Write the experiences that win hearts and minds. Write the experiences that win hearts and minds.",
+  },
+];
+---
+
+<section
+  id="about"
+  class="w-11/12 max-sm:py-20 sm:py-24 lg:py-40 flex items-center flex-col gap-10"
+>
+  <div class="px-10 md:pl-[10%] w-full pb-10">
+    <h1 class="text-5xl font-medium tracking-wider text-whi">ABOUT_</h1>
+    <p class="text-md pl-[2px] mt-2 text-whi opacity-80 whitespace-pre-line">
+      {about}
+    </p>
+  </div>
+  <div class="grid px-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+    {
+      cardData.map(({ id, name, image, description }) => {
+        return (
+          <div
+            class={`card card-${id} p-6 w-full flex flex-col items-center justify-items-center cursor-pointer group `}
+          >
+            <img
+              src={image}
+              alt="Image related to the post"
+              class="w-50 pt-6 h-84 object-cover group-hover:scale-110 transition-all duration-500 ease-in-out"
+            />
+            <h1 class="text-4xl z-10 py-16 pb-10 mt-auto font-medium text-whi">
+              {name}
+            </h1>
+            <h1 class="text-md z-10 pb-4 mt-auto font-normal text-whi opacity-80">
+              {description}
+            </h1>
+          </div>
+        );
+      })
+    }
+  </div>
+</section>
+<style>
+  .card {
+    background-color: #191f2f;
+    background-image: linear-gradient(0deg, #000000b3, transparent);
+    transition: all 0.5s ease-in-out;
+  }
+  .card-1:hover {
+    background-image: linear-gradient(
+      142deg,
+      rgb(178, 76, 37) 0%,
+      rgb(232, 150, 56) 100%
+    );
+  }
+  .card-2:hover {
+    background-image: linear-gradient(
+      142deg,
+      rgb(73, 153, 141) 0%,
+      rgb(163, 183, 80) 100%
+    );
+  }
+  .card-3:hover {
+    background: linear-gradient(
+      218deg,
+      rgb(39, 83, 178) 0%,
+      rgb(92, 173, 163) 100%
+    );
+  }
+</style>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="224" height="210" fill="none" viewBox="0 0 224 207">
+  <rect y="205" width="224" height="2" fill="url(#g)"/>
+  <rect x="33" y="79" width="48" height="126" fill="url(#f)" opacity=".9"/>
+  <rect transform="matrix(-1 0 0 1 70 184)" width="5" height="5" fill="#FFFFFA"/>
+  <rect transform="matrix(-1 0 0 1 70 170)" width="5" height="5" fill="#FFFFFA"/>
+  <rect x="81" y="79" width="110" height="126" fill="url(#e)"/>
+  <rect x="147" y="185" width="30" height="13" fill="#FFFFFA" opacity=".4"/>
+  <path d="m109.88 1.3789-27 27 4.2426 4.2426 27-27-4.243-4.2426z" clip-rule="evenodd" fill="url(#d)" fill-rule="evenodd"/>
+  <path d="m110.85 0.72845c1.121-0.46434 2.411-0.20768 3.269 0.65032l27 27-4.242 4.2426-21.879-21.879v158.76h-6v-166c0-1.2134 0.731-2.3073 1.852-2.7716z" clip-rule="evenodd" fill="url(#c)" fill-rule="evenodd"/>
+  <path d="m101.5 121.5-21-42.5h110.5l20.5 42.5h-110z" fill="url(#b)"/>
+  <path d="m60 121.5h-47.5l20.5-42h48l-21 42z" fill="url(#a)" opacity=".8"/>
+  <defs>
+    <linearGradient id="g" x1="6.029e-8" x2="224" y1="206.33" y2="206.33" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFA" stop-opacity=".9" offset="0"/>
+      <stop stop-color="#FFFFFA" stop-opacity="0" offset="1"/>
+    </linearGradient>
+    <linearGradient id="f" x1="57" x2="17.875" y1="111" y2="195.66" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFA" stop-opacity=".6" offset="0"/>
+      <stop stop-color="#FFFFFA" stop-opacity="0" offset="1"/>
+    </linearGradient>
+    <linearGradient id="e" x1="81" x2="177.92" y1="205" y2="69.633" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFA" stop-opacity=".6" offset="0"/>
+      <stop stop-color="#FFFFFA" stop-opacity="0" offset="1"/>
+    </linearGradient>
+    <linearGradient id="d" x1="85" x2="108.5" y1="31.5" y2="7.5" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFA" stop-opacity=".6" offset="0"/>
+      <stop stop-color="#FFFFFA" stop-opacity="0" offset="1"/>
+    </linearGradient>
+    <linearGradient id="c" x1="113" x2="150.96" y1="59" y2="73.776" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFA" stop-opacity=".8" offset=".008861"/>
+      <stop stop-color="#FFFFFA" stop-opacity="0" offset="1"/>
+    </linearGradient>
+    <linearGradient id="b" x1="105" x2="174" y1="122" y2="61" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFA" stop-opacity=".6" offset="0"/>
+      <stop stop-color="#393B45" offset="1"/>
+    </linearGradient>
+    <linearGradient id="a" x1="24" x2="5.0957" y1="122" y2="109.27" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFA" stop-opacity=".6" offset="0"/>
+      <stop stop-color="#FFFFFA" stop-opacity="0" offset="1"/>
+    </linearGradient>
+  </defs>
+</svg>

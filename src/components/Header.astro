@@ -1,0 +1,78 @@
+---
+import "../styles/base.css";
+const links: TLinks[] = [
+  {
+    label: "About",
+    url: "/#about",
+  },
+  {
+    label: "Posts",
+    url: "/#posts",
+  },
+];
+---
+
+<header
+  class="w-full fixed h-[12vh] flex justify-center transition-all bg-transparent hover:bg-black z-50 ease-in-out duration-300"
+>
+  <div
+    class="navbar w-11/12 h-full border-b-2 border-b-[#ffffff22] flex justify-between items-center max-sm:px-4 sm:px-10"
+  >
+    <a
+      class="font-poppins font-semibold text-2xl hover:bg-gradient-to-r from-[#e9792f] to-[#efd64f] hover:text-transparent hover:bg-clip-text"
+      href="/#home"
+      title="Home">blooog.</a
+    >
+    <nav class="flex h-full max-sm:gap-8 sm:gap-10 lg:gap-16">
+      {
+        links.map((link) => (
+          <a
+            href={link.url}
+            title={link.label}
+            class="nav-link group flex items-center justify-center flex-col h-full"
+          >
+            <span class="font-cera max-sm:text-lg sm:text-xl cursor-pointer mt-auto font-medium group-hover:bg-gradient-to-r from-[#e9792f] to-[#efd64f] group-hover:inline-block group-hover:text-transparent group-hover:bg-clip-text">
+              {link.label.toUpperCase()}
+            </span>
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+  <script>
+    window.addEventListener("scroll", () => {
+      const header = document.querySelector("header") as HTMLElement;
+      const navbar = document.querySelector(".navbar") as HTMLDivElement;
+      const scrollY = window.scrollY;
+      if (scrollY > 0) {
+        header.classList.remove("bg-transparent");
+        navbar.classList.remove("border-b-2");
+        header.classList.add("bg-black");
+      } else {
+        header.classList.remove("bg-black");
+        header.classList.add("bg-transparent");
+        navbar.classList.add("border-b-2");
+      }
+    });
+  </script>
+</header>
+
+<style>
+  .nav-link:after {
+    margin-top: auto;
+    content: "";
+    height: 2px;
+    width: 0%;
+    left: 50%;
+    background-color: #fffffa;
+    pointer-events: none;
+    transition:
+      width 0.2s ease-in-out,
+      left 0.2s ease-in-out;
+  }
+
+  .nav-link:hover:after {
+    width: 100%;
+    left: 0;
+  }
+</style>
